@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "338860676502",
+    "project_id": "rozgaar-7fdda",
+    "storage_bucket": "rozgaar-7fdda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338860676502:android:757c72b67bf56239b8f9b7",
+        "android_client_info": {
+          "package_name": "com.example.code"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBswIdZTIQATlyQJMqrDopB40oWoo8XBlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

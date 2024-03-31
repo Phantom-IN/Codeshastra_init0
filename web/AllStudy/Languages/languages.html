@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>RozGaar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Content" name="keywords" />
+    <meta content="Content" name="description" />
+
+    <!-- Favicon -->
+    <link href="/HomePage/img/favicon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link
+      href="/HomePage/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../HomePage/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="languages.css" />
+    <style>
+      .table .thead-dark th {
+        color: #fff;
+        background-color: #343a40;
+        border-color: #454d55;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="../../HomePage/index.html" class="navbar-brand ml-lg-3">
+          <h1 class="m-0 text-uppercase text-primary"
+            ><i class="fas fa-briefcase mr-3"></i>RozGaar</h1
+          >
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-lg-3"
+          id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+            <a href="../../HomePage/index.html" class="nav-item nav-link ">Home</a>
+            <a href="../../HomePage/company.html" class="nav-item nav-link ">Companies</a>
+            <a href="../../HomePage/events.html" class="nav-item nav-link">Events</a>
+            <a href="../../HomePage/about.html" class="nav-item nav-link">Code</a>
+            <a href="../../HomePage/course.html" class="nav-item nav-link active">Subjects</a>
+            <a href="../../QuizPage/QuizPage.html" class="nav-item nav-link">Quiz</a>
+            <a href="../../HomePage/chatbot.html" class="nav-item nav-link">Chat-Bot</a>
+            <a href="../../HomePage/interview.html" class="nav-item nav-link">Interview</a>
+            <a href="../../ranking/ranking.html" class="nav-item nav-link">Ranking</a>
+            <a href="../../HomePage/roadmap.html" class="nav-item nav-link">Roadmap</a>
+        </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div
+      class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom"
+      style="margin-bottom: 30px">
+      <div class="container text-center py-5">
+        <h1 class="text-white display-1">CODING LANGUAGES</h1>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Subjects Start -->
+    <div id="tab-menu-div">
+      <div class="tab">
+        <!-- sidebar buttons  -->
+        <button
+          id="firsttab"
+          class="tablinks"
+          onclick="openTab(event, 'Account')">
+          <div class="tab-button">
+            <div class="">
+              <p class="font-payment-tab-button-p">JAVA</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="tablinks" onclick="openTab(event, 'Replenish')">
+          <div class="tab-button">
+            <div class=" ">
+              <p class="font-payment-tab-button-p">C++</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="tablinks" onclick="openTab(event, 'Same-Day')">
+          <div class="tab-button">
+            <div class=" ">
+              <p class="font-payment-tab-button-p">Python</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <!-- main data   -->
+      <div id="Account" class="tabcontent" style="display: none">
+        <div class="tab-content-heading">Learn JAVA</div>
+        <div id="hero-content">
+          <!-- fill  -->
+          <iframe
+            src="https://docs.google.com/document/d/1bBF4dXYUqFUSFPSZYixww887VGGhFMRZlR6EKBhfbZQ/edit?usp=sharing"
+            height="700em"
+            width="1000"
+            title="Iframe Example"></iframe>
+        </div>
+      </div>
+
+      <div id="Replenish" class="tabcontent" style="display: none">
+        <div class="tab-content-heading">Learn C++</div>
+        <div id="hero-content">
+          <!-- fill  -->
+          <iframe
+            src="https://docs.google.com/document/d/1SKBB4luDrs-imHYqERwTrm4JI0W1LJfRIhDvmXJmv5k/edit?usp=sharing"
+            height="700em"
+            width="1000"
+            title="Iframe Example"></iframe>
+        </div>
+      </div>
+      <div id="Same-Day" class="tabcontent" style="display: none">
+        <div class="tab-content-heading">Learn Python</div>
+        <div id="hero-content">
+          <!-- fill  -->
+          <iframe
+            src="https://docs.google.com/document/d/1gd5qiS3kcE9Sj6eyiulSz4_bvVPpEXP7Ch-sINJfWFU/edit?usp=sharing"
+            height="700em"
+            width="1000"
+            title="Iframe Example"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Subjects End -->
+
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../../HomePage/lib/easing/easing.min.js"></script>
+    <script src="../../HomePage/lib/waypoints/waypoints.min.js"></script>
+    <script src="../../HomePage/lib/counterup/counterup.min.js"></script>
+    <script src="../../HomePage/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Javascript -->
+    <script src="../../HomePage/js/main.js"></script>
+    <script src="languages.js"></script>
+  </body>
+</html>

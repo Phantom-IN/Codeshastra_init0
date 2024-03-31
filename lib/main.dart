@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 import 'Home1.dart';
+import 'RHome1.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -34,7 +35,7 @@ class _SplashState extends State<Splash> {
     Future.delayed(Duration(seconds: 4,milliseconds: 200), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => Home1(),
+          builder: (context) => RHome1(),
         ),
       );
     });

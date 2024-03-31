@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RozGaar</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="Content" name="keywords" />
+<meta content="Content" name="description" />
+
+<!-- Favicon -->
+<link href="/HomePage/img/favicon.png" rel="icon" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+<!-- Libraries Stylesheet -->
+<link href="/HomePage/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="../HomePage/css/style.css" rel="stylesheet" />
+<style>
+  .table .thead-dark th {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+    <a href="../HomePage/index.html" class="navbar-brand ml-lg-3">
+      <h1 class="m-0 text-uppercase text-primary"><i class="fas fa-briefcase mr-3"></i>RozGaar</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+      <div class="navbar-nav mx-auto py-0">
+        <a href="../HomePage/index.html" class="nav-item nav-link ">Home</a>
+        <a href="../HomePage/company.html" class="nav-item nav-link ">Companies</a>
+        <a href="../HomePage/events.html" class="nav-item nav-link  ">Events</a>
+        <a href="../HomePage/about.html" class="nav-item nav-link">Code</a>
+        <a href="../HomePage/course.html" class="nav-item nav-link">Subjects</a>
+        <a href="../QuizPage/QuizPage.html" class="nav-item nav-link">Quiz</a>
+        <a href="../HomePage/chatbot.html" class="nav-item nav-link">Chat-Bot</a>
+        <a href="../HomePage/interview.html" class="nav-item nav-link">Interview</a>
+        <a href="../ranking/ranking.html" class="nav-item nav-link active">Ranking</a>
+        <a href="../HomePage/roadmap.html" class="nav-item nav-link">Roadmap</a>
+    </div>
+      
+  </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- Header Start -->
+<div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 30px">
+  <div class="container text-center py-5">
+    <h1 class="text-white display-1">Top Performers</h1>
+    <div class="d-inline-flex text-white mb-5">
+      <p class="m-0 text-uppercase"><a class="text-white" href="../HomePage/index.html">Home</a></p>
+      <i class="fa fa-angle-double-right pt-1 px-3"></i>
+      <p class="m-0 text-uppercase">Top Performers</p>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Subjects Start -->
+<div class="container-fluid py-5">
+  <div class="container py-2">
+    <div class="row mx-0 justify-content-center"></div>
+    <div class="row subject-grid">
+      <button id="btnExport" type="button" class="btn btn-success">Export to Excel</button>
+      <table class="table table-striped" id="rankTable">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Overall Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>johndoe@example.com</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>janesmith@example.com</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Alice Johnson</td>
+            <td>alicejohnson@example.com</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Michael Brown</td>
+            <td>michaelbrown@example.com</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Emily Davis</td>
+            <td>emilydavis@example.com</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>David Wilson</td>
+            <td>davidwilson@example.com</td>
+            <td>82</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Sarah Garcia</td>
+            <td>sarahgarcia@example.com</td>
+            <td>79</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>James Martinez</td>
+            <td>jamesmartinez@example.com</td>
+            <td>87</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Emma Rodriguez</td>
+            <td>emmarodriguez@example.com</td>
+            <td>93</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>William Lee</td>
+            <td>williamlee@example.com</td>
+            <td>84</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Olivia Clark</td>
+            <td>oliviaclark@example.com</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Benjamin Taylor</td>
+            <td>benjamintaylor@example.com</td>
+            <td>78</td>
+          </tr>                              
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Subjects End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../HomePage/lib/easing/easing.min.js"></script>
+<script src="../HomePage/lib/waypoints/waypoints.min.js"></script>
+<script src="../HomePage/lib/counterup/counterup.min.js"></script>
+<script src="../HomePage/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+<!-- Javascript -->
+<script src="../HomePage/js/main.js"></script>
+<script>
+document.getElementById('btnExport').addEventListener('click', function() {
+  // Get table element
+  var table = document.getElementById('rankTable');
+  // Convert table to worksheet
+  var ws = XLSX.utils.table_to_sheet(table);
+  // Create a new workbook
+  var wb = XLSX.utils.book_new();
+  // Add worksheet to workbook
+  XLSX.utils.book_append_sheet(wb, ws, 'Rankings');
+  // Save workbook as Excel file
+  XLSX.writeFile(wb, 'rankings.xlsx');
+});
+</script>
+
+</body>
+</html>

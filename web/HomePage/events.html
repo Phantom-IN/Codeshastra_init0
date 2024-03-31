@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>RozGaar - By BerozGaar</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Content" name="keywords" />
+  <meta content="Content" name="description" />
+
+  <!-- Favicon -->
+  <link href="img/favicon.png" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex-basis: calc(33.33% - 20px);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    #addCompanyForm {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #addCompanyBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      line-height: 50px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    #addCompanyBtn:focus {
+      outline: none;
+    }
+
+    #addCompanyBtn:hover {
+      background-color: #0056b3;
+    }
+
+    #addCompanyBtn i {
+      position: relative;
+      top: 2px;
+    }
+
+    #addCompanyForm label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    #addCompanyForm input[type="text"],
+    #addCompanyForm textarea,
+    #addCompanyForm input[type="file"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    #addCompanyForm button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #addCompanyForm button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="index.html" class="navbar-brand ml-lg-3">
+        <h1 class="m-0 text-uppercase text-primary"><i class="fas fa-briefcase mr-3"></i>RozGaar</h1>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav mx-auto py-0">
+          <a href="index.html" class="nav-item nav-link ">Home</a>
+          <a href="company.html" class="nav-item nav-link ">Companies</a>
+          <a href="events.html" class="nav-item nav-link active">Events</a>
+          <a href="about.html" class="nav-item nav-link">Code</a>
+          <a href="course.html" class="nav-item nav-link">Subjects</a>
+          <a href="../QuizPage/QuizPage.html" class="nav-item nav-link">Quiz</a>
+          <a href="chatbot.html" class="nav-item nav-link">Chat-Bot</a>
+          <a href="interview.html" class="nav-item nav-link">Interview</a>
+          <a href="../ranking/ranking.html" class="nav-item nav-link">Ranking</a>
+          <a href="roadmap.html" class="nav-item nav-link">Roadmap</a>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Header Start -->
+  <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px">
+    <div class="container text-center py-5">
+      <h1 class="text-white display-1">Events</h1>
+      <div class="d-inline-flex text-white mb-5">
+        <p class="m-0 text-uppercase"><a class="text-white" href="">List Recruitment Events/Fairs</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- Header End -->
+
+  <!-- Add Company Button -->
+  <button id="addCompanyBtn"><i class="fas fa-plus"></i></button>
+
+  <!-- Add Company Form -->
+<!-- Add Company Form -->
+<div id="addCompanyForm">
+  <h2>Add Event</h2>
+  <form id="eventForm">
+    <div>
+      <label for="eventName">Event Name:</label>
+      <input type="text" id="eventName" name="eventName" required>
+    </div>
+    <div>
+      <label for="eventDescription">Description:</label>
+      <textarea id="eventDescription" name="eventDescription" required></textarea>
+    </div>
+    <div>
+      <label for="eventLocation">Location:</label>
+      <input type="text" id="eventLocation" name="eventLocation" required>
+    </div>
+    <div>
+      <label for="eventWebsite">Opportunities:</label>
+      <input type="text" id="eventWebsite" name="eventWebsite" required>
+    </div>
+    <div>
+      <label for="eventImage">Event Image:</label>
+      <input type="file" id="eventImage" name="eventImage" accept="image/*" required>
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+  <!-- Add Company Form End -->
+
+  <!-- Card Container -->
+  <div class="card-container" id="cardContainer">
+    <!-- Static Company Cards -->
+    <div class="card">
+      <img src="img/gsoc.png" alt="Google Summer of Code" width="50px">
+      <h3>Google Summer of Code (GSoC)</h3>
+      <p>Open Source Coding Program</p>
+      <p>Location: Global</p>
+      <p>Internship Openings: Varies</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/flipkart-grid.jpg" alt="Flipkart Grid" width="100px">
+      <h3>Flipkart Grid</h3>
+      <p>Technology and Business Fair</p>
+      <p>Location: Bengaluru, India</p>
+      <p>Job and Internship Openings: Varies</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/build.png" alt="Microsoft Build" width="150px">
+      <h3>Microsoft Build</h3>
+      <p>Annual Developer Conference</p>
+      <p>Location: Various (Virtual in recent years)</p>
+      <p>Opportunities: Networking, Learning, Recruitment</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/wwdc.jpg" alt="WWDC" width="50px">
+      <h3>Apple Worldwide Developers Conference (WWDC)</h3>
+      <p>Annual Developer Conference</p>
+      <p>Location: Cupertino, California, United States (Virtual in recent years)</p>
+      <p>Opportunities: New Product Announcements, Workshops, Networking</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/f8.jpg" alt="Facebook F8" width="100px">
+      <h3>Facebook F8</h3>
+      <p>Annual Developer Conference</p>
+      <p>Location: Various (Virtual in recent years)</p>
+      <p>Opportunities: Product Announcements, Networking, Learning</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/techcrunch.jpg" alt="TechCrunch Disrupt" width="150px">
+      <h3>TechCrunch Disrupt</h3>
+      <p>Technology Conference and Startup Competition</p>
+      <p>Location: Various (Virtual in recent years)</p>
+      <p>Opportunities: Startup Pitches, Networking, Learning</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/aws-re.jpg" alt="Amazon re:Invent" width="100px">
+      <h3>Amazon re:Invent</h3>
+      <p>Annual AWS Conference</p>
+      <p>Location: Las Vegas, Nevada, United States (Virtual in recent years)</p>
+      <p>Opportunities: Learning, Certification, Networking</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/nvdia.png" alt="NVIDIA GTC" width="150px">
+      <h3>NVIDIA GTC (GPU Technology Conference)</h3>
+      <p>Annual Technology Conference</p>
+      <p>Location: Various (Virtual in recent years)</p>
+      <p>Opportunities: Deep Learning, AI, Networking</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/dreamforce.png" alt="Salesforce Dreamforce" width="150px">
+      <h3>Salesforce Dreamforce</h3>
+      <p>Annual Salesforce Conference</p>
+      <p>Location: San Francisco, California, United States (Virtual in recent years)</p>
+      <p>Opportunities: Learning, Networking, Product Announcements</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+    <div class="card">
+      <img src="img/jpmc.png" alt="JPMorgan Chase & Co. Code for Good" width="150px">
+      <h3>JPMorgan Chase & Co. Code for Good</h3>
+      <p>Volunteer Coding Event for Social Impact</p>
+      <p>Location: Various (Global)</p>
+      <p>Opportunities: Coding Challenges, Social Impact Projects</p>
+      <button class="apply-button">Apply Now</button>
+    </div>
+
+  </div>
+  <!-- Card Container End -->
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+  <!-- JavaScript --><script>
+  // Function to handle form submission
+  $('#eventForm').submit(function (event) {
+    event.preventDefault();
+    var eventName = $('#eventName').val();
+    var eventDescription = $('#eventDescription').val();
+    var eventLocation = $('#eventLocation').val();
+    var eventWebsite = $('#eventWebsite').val();
+    var eventImage = $('#eventImage')[0].files[0];
+
+    // Create card HTML with Apply Now button
+    var cardHtml = '<div class="card"><img src="' + URL.createObjectURL(eventImage) + '" alt="' + eventName + '"><h3>' + eventName + '</h3><p>' + eventDescription + '</p><p>Location: ' + eventLocation + '</p><p>Opportunities: ' + eventWebsite + '</p><button class="apply-button">Apply Now</button></div>';
+
+    // Append card to container
+    $('#cardContainer').append(cardHtml);
+
+    // Reset form fields
+    $('#eventName').val('');
+    $('#eventDescription').val('');
+    $('#eventLocation').val('');
+    $('#eventWebsite').val('');
+    $('#eventImage').val('');
+
+    // Hide form
+    $('#addCompanyForm').hide();
+  });
+
+  // Show add event form on button click
+  $('#addCompanyBtn').click(function () {
+    $('#addCompanyForm').toggle();
+  });
+</script>
+</body>
+
+</html>

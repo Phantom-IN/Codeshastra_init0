@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>RozGaar - By BerozGaar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Content" name="keywords" />
+    <meta content="Content" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- Custom Styles -->
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .card {
+            flex-basis: calc(33.33% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        #addCompanyForm {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #addCompanyBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            line-height: 50px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        #addCompanyBtn:focus {
+            outline: none;
+        }
+        
+        #addCompanyBtn:hover {
+            background-color: #0056b3;
+        }
+        
+        #addCompanyBtn i {
+            position: relative;
+            top: 2px;
+        }
+        
+        #addCompanyForm label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        #addCompanyForm input[type="text"],
+        #addCompanyForm textarea,
+        #addCompanyForm input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        #addCompanyForm button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        #addCompanyForm button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav
+          class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+          <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 text-uppercase text-primary"
+              ><i class="fas fa-briefcase mr-3"></i>RozGaar</h1
+            >
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-nav mx-auto py-0">
+            <a href="index.html" class="nav-item nav-link ">Home</a>
+            <a href="company.html" class="nav-item nav-link active">Companies</a>
+            <a href="events.html" class="nav-item nav-link  ">Events</a>
+            <a href="about.html" class="nav-item nav-link">Code</a>
+            <a href="course.html" class="nav-item nav-link">Subjects</a>
+            <a href="../QuizPage/QuizPage.html" class="nav-item nav-link">Quiz</a>
+            <a href="chatbot.html" class="nav-item nav-link">Chat-Bot</a>
+            <a href="interview.html" class="nav-item nav-link">Interview</a>
+            <a href="../ranking/ranking.html" class="nav-item nav-link">Ranking</a>
+            <a href="roadmap.html" class="nav-item nav-link">Roadmap</a>
+        </div>
+        </nav>
+      </div>
+      <!-- Navbar End -->
+    
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">Companies</h1>
+            <div class="d-inline-flex text-white mb-5">
+                <p class="m-0 text-uppercase"><a class="text-white" href="">We Have Tied Up With</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    
+    <!-- Add Company Button -->
+    <!-- <button id="addCompanyBtn"><i class="fas fa-plus"></i></button> -->
+    
+    <!-- Add Company Form -->
+    <!-- <div id="addCompanyForm">
+        <h2>Add Company</h2>
+        <form id="companyForm">
+            <div>
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+            </div>
+            <div>
+                <label for="companyDescription">Company Description:</label>
+                <textarea id="companyDescription" name="companyDescription" required></textarea>
+            </div>
+            <div>
+                <label for="companyLocation">Company Location:</label>
+                <input type="text" id="companyLocation" name="companyLocation" required>
+            </div>
+            <div>
+                <label for="companyWebsite">Company Website:</label>
+                <input type="text" id="companyWebsite" name="companyWebsite" required>
+            </div>
+            <div>
+                <label for="companyEmail">Company Email:</label>
+                <input type="email" id="companyEmail" name="companyEmail" required>
+            </div>
+            <div>
+                <label for="companyImage">Company Image:</label>
+                <input type="file" id="companyImage" name="companyImage" accept="image/*" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div> -->
+    <!-- Add Company Form End -->
+    
+    <!-- Card Container -->
+    <div class="card-container" id="cardContainer">
+        <!-- Static Company Cards -->
+        <div class="card">
+            <img src="img/google.png" alt="Google" width="50px">
+            <h3>Google</h3>
+            <p>Search Engine Giant</p>
+            <p>Location: Mountain View, California</p>
+            <p>Website: <a href="https://www.google.com" target="_blank">https://www.google.com</a></p>
+            <p>Email: <a href="mailto:info@google.com">info@google.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/flipkart-icon.webp" alt="Flipkart" width="50px">
+            <h3>Flipkart</h3>
+            <p>Indian E-commerce Company</p>
+            <p>Location: Bengaluru, Karnataka, India</p>
+            <p>Website: <a href="https://www.flipkart.com" target="_blank">https://www.flipkart.com</a></p>
+            <p>Email: <a href="mailto:info@flipkart.com">info@flipkart.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/Amazon-512.webp" alt="Amazon" width="50px">
+            <h3>Amazon</h3>
+            <p>World's Largest Online Retailer</p>
+            <p>Location: Seattle, Washington, United States</p>
+            <p>Website: <a href="https://www.amazon.com" target="_blank">https://www.amazon.com</a></p>
+            <p>Email: <a href="mailto:info@amazon.com">info@amazon.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/Microsoft_logo.svg.png" alt="Microsoft" width="50px">
+            <h3>Microsoft</h3>
+            <p>Leading Technology Corporation</p>
+            <p>Location: Redmond, Washington, United States</p>
+            <p>Website: <a href="https://www.microsoft.com" target="_blank">https://www.microsoft.com</a></p>
+            <p>Email: <a href="mailto:info@microsoft.com">info@microsoft.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/Apple_logo_black.svg.png" alt="Apple" width="50px">
+            <h3>Apple Inc.</h3>
+            <p>Innovative Technology Company</p>
+            <p>Location: Cupertino, California, United States</p>
+            <p>Website: <a href="https://www.apple.com" target="_blank">https://www.apple.com</a></p>
+            <p>Email: <a href="mailto:info@apple.com">info@apple.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/meta-6871457_1280.webp" alt="Facebook" width="50px">
+            <h3>Meta Platforms, Inc. (formerly Facebook)</h3>
+            <p>Social Media and Technology Company</p>
+            <p>Location: Menlo Park, California, United States</p>
+            <p>Website: <a href="https://about.meta.com" target="_blank">https://about.meta.com</a></p>
+            <p>Email: <a href="mailto:info@meta.com">info@meta.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/tesla.webp" alt="Tesla" width="50px">
+            <h3>Tesla, Inc.</h3>
+            <p>Electric Vehicle and Clean Energy Company</p>
+            <p>Location: Palo Alto, California, United States</p>
+            <p>Website: <a href="https://www.tesla.com" target="_blank">https://www.tesla.com</a></p>
+            <p>Email: <a href="mailto:info@tesla.com">info@tesla.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/alibaba.jpg" alt="Alibaba" width="50px">
+            <h3>Alibaba Group Holding Limited</h3>
+            <p>E-Commerce and Technology Company</p>
+            <p>Location: Hangzhou, Zhejiang, China</p>
+            <p>Website: <a href="https://www.alibabagroup.com" target="_blank">https://www.alibabagroup.com</a></p>
+            <p>Email: <a href="mailto:info@alibaba.com">info@alibaba.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/tencent.jpg" alt="Tencent" width="50px">
+            <h3>Tencent Holdings Limited</h3>
+            <p>Internet and Technology Conglomerate</p>
+            <p>Location: Shenzhen, Guangdong, China</p>
+            <p>Website: <a href="https://www.tencent.com" target="_blank">https://www.tencent.com</a></p>
+            <p>Email: <a href="mailto:info@tencent.com">info@tencent.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/netflix.png" alt="Netflix" width="50px">
+            <h3>Netflix, Inc.</h3>
+            <p>Streaming Entertainment Service</p>
+            <p>Location: Los Gatos, California, United States</p>
+            <p>Website: <a href="https://www.netflix.com" target="_blank">https://www.netflix.com</a></p>
+            <p>Email: <a href="mailto:info@netflix.com">info@netflix.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/jpmc.png" alt="JPMorgan Chase" width="50px">
+            <h3>JPMorgan Chase & Co.</h3>
+            <p>Global Financial Services Firm</p>
+            <p>Location: New York City, New York, United States</p>
+            <p>Website: <a href="https://www.jpmorganchase.com" target="_blank">https://www.jpmorganchase.com</a></p>
+            <p>Email: <a href="mailto:info@jpmorganchase.com">info@jpmorganchase.com</a></p>
+        </div>
+        <div class="card">
+            <img src="img/tcs.jpg" alt="Tata Consultancy Services" width="50px">
+
+            <h3>Tata Consultancy Services (TCS)</h3>
+            <p>Global IT Services and Consulting Company</p>
+            <p>Location: Mumbai, Maharashtra, India</p>
+            <p>Website: <a href="https://www.tcs.com" target="_blank">https://www.tcs.com</a></p>
+            <p>Email: <a href="mailto:info@tcs.com">info@tcs.com</a></p>
+        </div>
+        
+                                        
+        <!-- Add more static company cards here -->
+    </div>
+    <!-- Card Container End -->
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to handle form submission
+        $('#companyForm').submit(function(event) {
+            event.preventDefault();
+            var companyName = $('#companyName').val();
+            var companyDescription = $('#companyDescription').val();
+            var companyLocation = $('#companyLocation').val();
+            var companyWebsite = $('#companyWebsite').val();
+            var companyEmail = $('#companyEmail').val();
+            var companyImage = $('#companyImage')[0].files[0];
+            
+            // Create card HTML
+            var cardHtml = '<div class="card"><img src="' + URL.createObjectURL(companyImage) + '" alt="' + companyName + '"><h3>' + companyName + '</h3><p>' + companyDescription + '</p><p>Location: ' + companyLocation + '</p><p>Website: <a href="' + companyWebsite + '" target="_blank">' + companyWebsite + '</a></p><p>Email: <a href="mailto:' + companyEmail + '">' + companyEmail + '</a></p></div>';
+            
+            // Append card to container
+            $('#cardContainer').append(cardHtml);
+            
+            // Reset form fields
+            $('#companyName').val('');
+            $('#companyDescription').val('');
+            $('#companyLocation').val('');
+            $('#companyWebsite').val('');
+            $('#companyEmail').val('');
+            $('#companyImage').val('');
+            
+            // Hide form
+            $('#addCompanyForm').hide();
+        });
+        
+        // Show add company form on button click
+        $('#addCompanyBtn').click(function() {
+            $('#addCompanyForm').toggle();
+        });
+    </script>
+</body>
+</html>

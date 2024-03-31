@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Editor</title>
+<!-- Inline CSS -->
+<style>
+.studio {
+    font-family: 'Source Sans Pro';
+    overflow: hidden;
+}
+
+/* Top Bar Section */
+.bar {
+    height: 60px;
+    background: #000;
+    border-bottom: solid 5px #333;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.bar .buttons {
+    width: 50vw;
+    min-width: 540px;
+    display: flex;
+    font-family: inherit;
+}
+
+.bar .buttons button {
+    flex: auto;
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    background: transparent;
+    border: solid 2px #333;
+    border-radius: 2px;
+    color: #fff;
+    height: 44px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 7px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.bar button.view,
+.bar button.settings {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #333;
+}
+
+.bar button.save,
+.bar button.fork {}
+
+.bar .image {
+    width: 44px;
+    height: 44px;
+    margin-top: 7px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-left: 3px;
+}
+
+/* Editor Wrapper Styles */
+.editor {
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+}
+
+#html {
+    border-right: solid 1px #777;
+}
+
+#css {
+    border-left: solid 20px #333;
+    border-right: solid 1px #777;
+}
+
+#js {
+    border-left: solid 20px #333;
+}
+
+/* The Wrapper for the editor wrappers */
+.control-room {
+    height: calc(50vh - 63px);
+    background: #eee;
+    border-top: solid 1px #000;
+    border-bottom: solid 10px #333;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Live Preview Wrapper */
+.live-room {
+    height: calc(50vh - 63px);
+    background: #fff;
+    border-top: solid 10px #333;
+    position: relative;
+}
+
+/* Iframe Live Preview */
+.live-room iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    height: 40px;
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-bar button {
+    background: #111;
+    color: #fff;
+    font-size: 11px;
+    border: hidden;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+/* Left Side */
+.bottom-bar .left-side {
+    display: flex;
+    align-items: center;
+}
+
+/* Right Side */
+.bottom-bar .right-side {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+h5 {
+    display: inline-block;
+    color: #777;
+    font-weight: 300;
+}
+
+.bottom-bar .right-side button,
+h5 {}
+
+</style>
+<!-- CodeMirror CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/panda-syntax.min.css">
+
+</head>
+<body>
+
+<div class="studio">
+    <button class="about-button" onclick="goToAboutPage()">Back</button>
+    <div class="control-room">
+        <div class="editor" id="html"></div>
+        <div class="editor" id="css"></div>
+        <div class="editor" id="js"></div>
+    </div>
+    <div class="live-room">
+        <iframe id="live" src=""></iframe>
+    </div>
+</div>
+
+<!-- CodeMirror JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/addon/edit/closetag.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/addon/edit/matchbrackets.min.js"></script>
+
+<!-- JavaScript code -->
+<script>
+/**
+** Ug
+*/
+
+const Studio = function () {
+    /** 
+    ** If Argument Object is missing
+    ** dom it will look for html 
+    ** css and js ids in the DOM
+    */
+    if (arguments[0] && !arguments[0]['dom'] || !arguments[0]) {
+        this.dom = {
+            html: document.getElementById('html'),
+            css: document.getElementById('css'),
+            js: document.getElementById('js')
+        };
+    } else {
+        this.dom = arguments[0]['dom'];
+    }
+    /**
+    ** The Defaults Object can take in
+    ** new options through its
+    ** function
+    */
+    this.defaults = function (object) {
+        var defs = {
+            lineNumbers: true,
+            autoCloseTags: true,
+            autoCloseBrackes: true,
+            theme: 'panda-syntax',
+        };
+        if (object) {
+            var key = Object.keys(object)
+            for (var i = 0; i < key.length; i++) {
+                defs[key[i]] = object[key[i]];
+            }
+        }
+        return defs;
+    }
+    /**
+    ** this.editor holds the creation
+    ** and mounting of the CodeMirror 
+    ** editors.
+    */
+    this.editor = {
+        html: CodeMirror(this.dom.html, this.defaults({
+            mode: 'text/html',
+            value: '<h1>Hello World!</h1>'
+        })),
+        css: CodeMirror(this.dom.css, this.defaults({
+            mode: 'css',
+            value: 'body {\n\tcolor: red;\n}'
+        })),
+        js: CodeMirror(this.dom.js, this.defaults({
+            mode: 'javascript',
+            value: 'console.log("hi")'
+        }))
+    }
+}
+/** Initialize Editors
+** And load them to DOM
+*/
+const studio = new Studio({
+    dom: {
+        html: document.getElementById('html'),
+        css: document.getElementById('css'),
+        js: document.getElementById('js')
+    }
+})
+/** 
+** Messy Code That Sends The Updated 
+** Code From The Editors To The 
+** Iframe
+*/
+const liveRoom = document.getElementById('live');
+liveRoom.contentWindow.document.body.innerHTML = '<h1>Hello World!</h1>';
+const style = document.createElement('style');
+style.setAttribute('id', 'style');
+style.innerHTML = 'body {color: red;}'
+
+const script = document.createElement('script');
+script.innerHTML = 'console.log("hi")';
+
+liveRoom.contentWindow.document.head.appendChild(style);
+liveRoom.contentWindow.document.head.appendChild(script)
+
+CodeMirror.on(studio.editor.html, 'change', function () {
+  liveRoom.contentWindow.document.body.innerHTML = studio.editor.html.getValue();
+})
+CodeMirror.on(studio.editor.css, 'change', function () {
+  liveRoom.contentWindow.document.getElementById('style').innerHTML = studio.editor.css.getValue();
+})
+
+function goToAboutPage() {
+    window.location.href = 'about.html';
+}
+</script>
+
+</body>
+</html>

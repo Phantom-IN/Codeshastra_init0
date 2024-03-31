@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>RozGaar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Content" name="keywords" />
+    <meta content="Content" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+          <h1 class="m-0 text-uppercase text-primary"
+            ><i class="fas fa-briefcase mr-3"></i>RozGaar</h1
+          >
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-lg-3"
+          id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="company.html" class="nav-item nav-link ">Companies</a>
+            <a href="events.html" class="nav-item nav-link  ">Events</a>
+            <a href="about.html" class="nav-item nav-link active">Code</a>
+            <a href="course.html" class="nav-item nav-link">Subjects</a>
+            <a href="../QuizPage/QuizPage.html" class="nav-item nav-link">Quiz</a>
+            <a href="chatbot.html" class="nav-item nav-link">Chat-Bot</a>
+            <a href="interview.html" class="nav-item nav-link">Interview</a>
+            <a href="../ranking/ranking.html" class="nav-item nav-link">Ranking</a>
+            <a href="roadmap.html" class="nav-item nav-link">Roadmap</a>
+        </div>
+          
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div
+      class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom"
+      style="margin-bottom: 90px">
+      <div class="container text-center py-5">
+        <h1 class="text-white display-1">Code</h1>
+        <div class="d-inline-flex text-white mb-5">
+          <p class="m-0 text-uppercase"
+            ><a class="text-white" href="">Home</a></p
+          >
+          <i class="fa fa-angle-double-right pt-1 px-3"></i>
+          <p class="m-0 text-uppercase">CODE</p>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+<!-- Job Role Dropdown -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="jobRoleSelect">Select Job Role:</label>
+        <select class="form-control" id="jobRoleSelect">
+          <option value="web_developer">Web Developer</option>
+          <option value="dsa">DSA (Data Structures & Algorithms)</option>
+          <option value="aiml">AIML (Artificial Intelligence & Machine Learning)</option>
+          <option value="devops">DevOps Engineer</option>
+          <option value="frontend_developer">Frontend Developer</option>
+          <!-- Add more job roles as needed -->
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Coding Questions Start -->
+<section class="section coding-questions mt-5">
+  <div class="container">
+    <div class="row" id="codingQuestionsContainer">
+      <!-- Coding question cards will be dynamically added here based on the selected job role -->
+    </div>
+  </div>
+</section>
+<!-- Coding Questions End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top">
+  <i class="fa fa-angle-double-up"></i>
+</a>
+
+<!-- JavaScript for Dynamic Job Role Specific Cards -->
+<script>
+  // Define coding questions for each job role
+  const codingQuestions = {
+    web_developer: [
+      {
+        title: "Question 1",
+        description: "Create a responsive navigation bar using HTML and CSS.",
+        solutionLink: "websolve.html"
+      },
+      {
+        title: "Question 2",
+        description: "Implement a JavaScript function to validate a form input.",
+        solutionLink: "websolve.html"
+      },
+      {
+        title: "Question 3",
+        description: "Build a simple website layout using Bootstrap.",
+        solutionLink: "websolve.html"
+      },
+      {
+        title: "Question 4",
+        description: "Develop a JavaScript countdown timer for a webpage.",
+        solutionLink: "websolve.html"
+      },
+      {
+        title: "Question 5",
+        description: "Design and code a CSS animation for a loading spinner.",
+        solutionLink: "websolve.html"
+      }
+    ],
+    dsa: [
+      {
+        title: "Question 1",
+        description: "Implement a stack data structure in Python.",
+        solutionLink: "dsasolve.html"
+      },
+      {
+        title: "Question 2",
+        description: "Write a function to reverse a string using a stack in Java.",
+        solutionLink: "dsasolve.html"
+      },
+      {
+        title: "Question 3",
+        description: "Implement a binary search tree in C++.",
+        solutionLink: "dsasolve.html"
+      },
+      {
+        title: "Question 4",
+        description: "Solve the problem of finding the factorial of a number using recursion in Python.",
+        solutionLink: "dsasolve.html"
+      },
+      {
+        title: "Question 5",
+        description: "Write an algorithm to detect a cycle in a directed graph using depth-first search (DFS).",
+        solutionLink: "dsasolve.html"
+      }
+    ],
+    aiml: [
+      {
+        title: "Question 1",
+        description: "Implement linear regression using Python libraries like NumPy and scikit-learn.",
+        solutionLink: "aimlsolve.html"
+      },
+      {
+        title: "Question 2",
+        description: "Build a neural network model for image classification using TensorFlow or Keras.",
+        solutionLink: "aimlsolve.html"
+      },
+      {
+        title: "Question 3",
+        description: "Train a sentiment analysis model on a dataset using natural language processing techniques.",
+        solutionLink: "aimlsolve.html"
+      },
+      {
+        title: "Question 4",
+        description: "Implement k-nearest neighbors (KNN) algorithm for classification in Python.",
+        solutionLink: "aimlsolve.html"
+      },
+      {
+        title: "Question 5",
+        description: "Use scikit-learn to perform dimensionality reduction using principal component analysis (PCA).",
+        solutionLink: "aimlsolve.html"
+      }
+    ],
+    devops: [
+      {
+        title: "Question 1",
+        description: "Write a Dockerfile to containerize a Node.js application.",
+        solutionLink: "solve.html"
+      },
+      {
+        title: "Question 2",
+        description: "Set up a CI/CD pipeline using Jenkins for a Java Spring Boot project.",
+        solutionLink: "solve.html"
+      },
+      {
+        title: "Question 3",
+        description: "Automate server provisioning using Ansible playbooks.",
+        solutionLink: "solve.html"
+      },
+      {
+        title: "Question 4",
+        description: "Deploy a microservices architecture using Kubernetes.",
+        solutionLink: "solve.html"
+      },
+      {
+        title: "Question 5",
+        description: "Configure monitoring and alerting for a web application using Prometheus and Grafana.",
+        solutionLink: "solve.html"
+      }
+    ],
+    frontend_developer: [
+      {
+        title: "Question 1",
+        description: "Build a responsive landing page using HTML, CSS, and JavaScript.",
+        solutionLink: "frontsolve.html"
+      },
+      {
+        title: "Question 2",
+        description: "Create reusable React components for a todo list application.",
+        solutionLink: "frontsolve.html"
+      },
+      {
+        title: "Question 3",
+        description: "Optimize web performance by lazy loading images and bundling JavaScript files.",
+        solutionLink: "frontsolve.html"
+      },
+      {
+        title: "Question 4",
+        description: "Integrate a RESTful API with a Vue.js frontend application.",
+        solutionLink: "frontsolve.html"
+      },
+      {
+        title: "Question 5",
+        description: "Implement client-side routing using React Router for a multi-page web application.",
+        solutionLink: "frontsolve.html"
+      }
+    ]
+    // Add more job roles and corresponding questions as needed
+  };
+
+  // Function to populate coding question cards based on selected job role
+  function populateCodingQuestions(role) {
+    const questions = codingQuestions[role];
+    const codingQuestionsContainer = document.getElementById('codingQuestionsContainer');
+    if (!questions || !codingQuestionsContainer) return;
+
+    // Clear previous cards
+    codingQuestionsContainer.innerHTML = '';
+
+    // Populate new cards
+    questions.forEach(question => {
+      const cardHtml = `
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${question.title}</h5>
+              <p class="card-text">${question.description}</p>
+              <a href="${question.solutionLink}" class="btn btn-primary">Solve</a>
+            </div>
+          </div>
+        </div>
+      `;
+      codingQuestionsContainer.innerHTML += cardHtml;
+    });
+  }
+
+  // Event listener for job role select change
+  document.getElementById('jobRoleSelect').addEventListener('change', function() {
+    const selectedRole = this.value;
+    populateCodingQuestions(selectedRole);
+  });
+
+  // Initial population of coding questions based on default selected role
+  populateCodingQuestions(document.getElementById('jobRoleSelect').value);
+</script>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Javascript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

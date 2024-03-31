@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Circles and Plus Symbols</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: skyblue;
+  }
+  .plus-circle-container {
+    position: relative;
+    height: 100px;
+    width: 500px;
+    left: 25%;
+    top: 50%;
+    perspective: 250px;
+    transform: translate(0%, 50%);
+    transform-style: preserve-3d;
+  }
+  .plus-symbol-box1 {
+    position: absolute;
+    height: 3.5px;
+    width: 3.5px;
+    top: 200px;
+    left: 400px;
+    background: navy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: move-box-one 2s cubic-bezier(1,.9,0,.93) 1.2s 1 forwards;
+  }
+  .plus-symbol1, .plus-symbol2 {
+    background: navy;
+    height: 28px;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+  .plus-symbol1 {
+    transform: rotate(90deg);
+  }
+  .plus-symbol-box2 {
+    position: absolute;
+    height: 3.5px;
+    width: 3.5px;
+    top: 300px;
+    left: 10px;
+    background: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: move-box-second 1s cubic-bezier(1,.9,0,.93) 1.8s 1 forwards;
+  }
+  .plus-symbol1-second, .plus-symbol2-second {
+    background: navy;
+    height: 28px;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+  .plus-symbol1-second {
+    transform: rotate(90deg);
+  }
+  .circle {
+    height: 10px;
+    width: 10px;
+    background: navy;
+    border-radius: 50%;
+    position: absolute;
+    animation: move-circle 3s linear 1 forwards;
+    opacity: 0;
+    top: -60px;
+  }
+
+  @keyframes move-circle {
+    0% {
+      left: 10px;
+      top: 30px;
+      opacity: 1;
+    }
+    40% {
+      left: 390px;
+      opacity: 1;
+      top: 190px;
+      transform: scale(2);
+    }
+    65% {
+      left: 400px;
+      top: 200px;
+      opacity: 0;
+      transform: scale(6);
+    }
+    70% {
+      left: 10px;
+      top: 300px;
+      opacity: 1;
+      transform: scale(2);
+    }
+    80% {
+      opacity: 0;
+    }
+    90% {
+      left: 240px;
+      opacity: 0.8;
+      top: 230px;
+      transform: scale(15);
+      background: radial-gradient(circle, #0b0642 50%, #0b0642 10%);
+    }
+    100% {
+      opacity: 0;
+      left: 240px;
+      top: 230px;
+      transform: scale(15);
+    }
+  }
+
+  /* animation for left cross */
+  @keyframes move-box-second {
+    0% {
+      transform: rotateZ(0deg);
+      top: 300px;
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+      top: 300px;
+      transform: rotateZ(-180deg) scale(3);
+    }
+    70% {
+      top: 300px;
+      left: 40px;
+      transform: rotateZ(-225deg) scale(5);
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.5;
+      transform: rotateZ(-225deg) scale(6.5);
+    }
+    100% {
+      opacity: 0.5;
+      transform: rotateZ(-225deg) scale(5);
+      left: 245px;
+      top: 235px;
+      width: 15px;
+    }
+  }
+
+  /* animation for right cross */
+  @keyframes move-box-one {
+    0% {
+      top: 200px;
+      opacity: 1;
+      transform: rotateZ(0deg) scale(2);
+    }
+    50% {
+      opacity: 1;
+      top: 190px;
+      transform: rotateZ(-180deg) scale(3);
+    }
+    70% {
+      top: 180px;
+      opacity: 0.8;
+      left: 450px;
+      transform: rotateZ(-225deg) scale(5);
+    }
+    90% {
+      opacity: 1;
+      transform: rotateZ(-225deg) scale(6);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateZ(-225deg) scale(6);
+      left: 245px;
+      top: 235px;
+      width: 10px;
+    }
+  }
+
+  .small-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 120px;
+    position: absolute;
+    left: 400px;
+    opacity: 0.5;
+    border: 2px solid hotpink;
+    box-shadow: 25px 20px blue, 50px 80px #0b0642, 80px -20px #0b0642,
+      10px 100px blue, -20px 60px #0b0642;
+    animation-name: small-circle;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes small-circle {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .very-small-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 230px;
+    position: absolute;
+    left: 50px;
+    opacity: 0.5;
+    border: 2px solid hotpink;
+    box-shadow: 25px 20px blue, 50px 80px #0b0642, 80px -20px #0b0642,
+      10px 100px blue, -20px 60px #0b0642, 130px 140px lightblue;
+    animation-name: small-circle2;
+    animation-delay: none
+  }

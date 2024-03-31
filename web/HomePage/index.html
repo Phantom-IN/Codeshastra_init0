@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>RozGaar - By BerozGaar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Content" name="keywords" />
+    <meta content="Content" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+  
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+          <h1 class="m-0 text-uppercase text-primary"
+            ><i class="fas fa-briefcase mr-3"></i>RozGaar</h1
+          >
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-lg-3"
+          id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="company.html" class="nav-item nav-link ">Companies</a>
+            <a href="events.html" class="nav-item nav-link  ">Events</a>
+            <a href="about.html" class="nav-item nav-link">Code</a>
+            <a href="course.html" class="nav-item nav-link">Subjects</a>
+            <a href="../QuizPage/QuizPage.html" class="nav-item nav-link">Quiz</a>
+            <a href="chatbot.html" class="nav-item nav-link">Chat-Bot</a>
+            <a href="interview.html" class="nav-item nav-link">Interview</a>
+            <a href="../ranking/ranking.html" class="nav-item nav-link">Ranking</a>
+            <a href="roadmap.html" class="nav-item nav-link">Roadmap</a>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div
+      class="jumbotron jumbotron-fluid position-relative overlay-bottom"
+      style="margin-bottom: 90px">
+      <div class="container text-center my-5 py-5">
+        <h1 class="text-white mt-4 mb-4">What Do You Want To Learn??</h1>
+        <div class="mx-auto mb-5" style="width: 100%; max-width: 600px">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Subjects</button
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="course.html">OOPs</a>
+                <a class="dropdown-item" href="course.html">DBMS</a>
+                <a class="dropdown-item" href="course.html">DSA</a>
+                <a class="dropdown-item" href="course.html">OS</a>
+
+              </div>
+            </div>
+            <input
+    type="text"
+    class="form-control border-light"
+    style="padding: 30px 25px"
+    placeholder="Subject"
+    onsubmit="redirectToCourse()"
+/>
+
+            <div class="input-group-append">
+              <button class="btn btn-secondary px-4 px-lg-5">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px">
+            <div class="position-relative h-100">
+              <img
+                class="position-absolute w-100 h-100"
+                src="../HomePage/img/header.jpg" Image
+                style="object-fit: cover" />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="section-title position-relative mb-4">
+              <h6
+                class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+                >WHO ARE WE?</h6
+              >
+              <h1 class="display-4">RozGaar by BerozGaar </h1>
+            </div>
+            <p
+              >Introducing RozGaar by BerozGaar, your ultimate destination for mastering coding interviews with confidence. RozGaar offers a comprehensive suite of tools and resources meticulously crafted to empower aspiring software engineers in their journey to excel in interviews. Our platform boasts curated practice questions, immersive mock interviews conducted by seasoned engineers, expertly crafted video tutorials, and personalized performance feedback.
+
+              RozGaar's intuitive interface allows users to seamlessly monitor their progress, pinpoint areas for improvement, and tailor their preparation to align with specific companies and job roles. With RozGaar, users can sharpen their coding skills, refine essential techniques, and significantly enhance their prospects of securing their dream roles in the tech industry.</p
+            >
+            <div class="row pt-3 mx-0">
+              <div class="col-3 px-0">
+                <div class="bg-success text-center p-4">
+                  <h1 class="text-white" data-toggle="counter-up">20</h1>
+                  <h6 class="text-uppercase text-white"
+                    ><span class="d-block">Subjects</span></h6
+                  >
+                </div>
+              </div>
+              <div class="col-3 px-0">
+                <div class="bg-primary text-center p-4">
+                  <h1 class="text-white" data-toggle="counter-up">100</h1>
+                  <h6 class="text-uppercase text-white"
+                    >Quizzes<span class="d-block"></span></h6
+                  >
+                </div>
+              </div>
+              <div class="col-3 px-0">
+                <div class="bg-secondary text-center p-4">
+                  <h1 class="text-white" data-toggle="counter-up">25</h1>
+                  <h6 class="text-uppercase text-white"
+                    >Languages<span class="d-block"></span></h6
+                  >
+                </div>
+              </div>
+              <div class="col-3 px-0">
+                <div class="bg-warning text-center p-4">
+                  <h1 class="text-white" data-toggle="counter-up">500</h1>
+                  <h6 class="text-uppercase text-white"
+                    ><span class="d-block">Students</span></h6
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-image" style="margin: 90px 0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 my-5 pt-5 pb-lg-5">
+            <div class="section-title position-relative mb-4">
+              <h6
+                class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+                >Why Choose Us?</h6
+              >
+              <h1 class="display-4">Why You Should Start Learning with Us?</h1>
+            </div>
+            <p class="mb-4 pb-2"
+              >Learn with us at RozGaar to access comprehensive resources,
+              experienced instructors, personalized learning paths, real-world
+              scenarios, and a proven track record of success. Our platform is
+              designed to help you ace your coding interview and land your dream
+              job in the tech industry.</p
+            >
+            <div class="d-flex mb-3">
+              <div class="btn-icon bg-primary mr-4">
+                <i class="fa fa-2x fa-graduation-cap text-white"></i>
+              </div>
+              <div class="mt-n1">
+                <h4>Key Interview Topics Covered</h4>
+                <p
+                  >Some key interview topics covered on RozGaar include data
+                  structures, algorithms, system design, object-oriented
+                  programming, databases, and coding best practices.</p
+                >
+              </div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="btn-icon bg-secondary mr-4">
+                <i class="fa fa-2x fa-certificate text-white"></i>
+              </div>
+              <div class="mt-n1">
+                <h4>Comprehensive Quiz Assessments</h4>
+                <p
+                  >RozGaar offers comprehensive quiz assessments to help you
+                  evaluate your coding knowledge and identify areas for
+                  improvement. Our quizzes are tailored to specific companies
+                  and job roles, providing you with targeted preparation.</p
+                >
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="btn-icon bg-warning mr-4">
+                <i class="fa fa-2x fa-book-reader text-white"></i>
+              </div>
+              <div class="mt-n1">
+                <h4>Fun Quizzes To Discover</h4>
+                <p class="m-0"
+                  >Discover fun quizzes on RozGaar that can help you improve
+                  your coding skills, explore new programming concepts, and test
+                  your knowledge in a variety of tech-related topics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Start -->
+
+    <!-- Subjects Start -->
+    <div class="container-fluid px-0 py-5">
+      <div class="row mx-0 justify-content-center pt-5">
+        <div class="col-lg-6">
+          <div class="section-title text-center position-relative mb-4">
+            <h6
+              class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+              >Our Subjects</h6
+            >
+            <h4 class="display-4"
+              >Learn It All!!</h4
+            >
+          </div>
+        </div>
+      </div>
+      <div class="owl-carousel courses-carousel">
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-1.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">Python</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Vaibhav Vanage</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-3.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">Java</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Aryan Surve</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-2.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">C++</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Shivam Musterya</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-2.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">System Design</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Shivam Musterya</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-2.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">DBMS</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Aditi Gaikwad</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-2.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">AI</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Vaibhav Vanage</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-3.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">Machine Learning</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Shivam Musterya</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-4.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">Osa</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Vaibhav Vanage</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-5.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">Dsa</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Aryan Surve</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="courses-item position-relative">
+          <img class="img-fluid" src="img/courses-6.jpg" alt="" />
+          <div class="courses-text">
+            <h4 class="text-center text-white px-3">OOPs</h4>
+            <div class="border-top w-100 mt-3">
+              <div class="d-flex justify-content-between p-4">
+                <span class="text-white"
+                  ><i class="fa fa-user mr-2"></i>Aditi Gaikwad</span
+                >
+                <span class="text-white"
+                  ><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span
+                >
+              </div>
+            </div>
+            <div class="w-100 bg-white text-center p-4">
+              <a class="btn btn-primary" href="course.html">Subject Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Subjects End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="section-title text-center position-relative mb-5">
+          <h6
+            class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+            >Mentors</h6
+          >
+          <h1 class="display-4">Meet Our Mentors</h1>
+        </div>
+        <div
+          class="owl-carousel team-carousel position-relative"
+          style="padding: 0 30px">
+          <div class="team-item">
+            <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
+            <div class="bg-light text-center p-4">
+              <h5 class="mb-3">Shivam Musterya</h5>
+              <p class="mb-2">DSA</p>
+              <div class="d-flex justify-content-center">
+                <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                </a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="team-item">
+            <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
+            <div class="bg-light text-center p-4">
+              <h5 class="mb-3">Shivam Musterya</h5>
+              <p class="mb-2">C++</p>
+              <div class="d-flex justify-content-center">
+                <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                </a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="team-item">
+            <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
+            <div class="bg-light text-center p-4">
+              <h5 class="mb-3">Shivam Musterya</h5>
+              <p class="mb-2">Python</p>
+              <div class="d-flex justify-content-center">
+                <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                </a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="team-item">
+            <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
+            <div class="bg-light text-center p-4">
+              <h5 class="mb-3">Shivam Musterya</h5>
+              <p class="mb-2">Java</p>
+              <div class="d-flex justify-content-center">
+                <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                </a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="mx-1 p-1" href="#"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-image py-5" style="margin: 90px 0">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="section-title position-relative mb-4">
+              <h6
+                class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+                >Testimonial</h6
+              >
+              <h1 class="display-4">What Say Our Students</h1>
+            </div>
+            <p class="m-0"
+              >Our students love RozGaar for its comprehensive resources,
+              personalized learning paths, experienced instructors, and
+              real-world scenarios that prepare them for coding interviews.
+              RozGaar has helped them land their dream jobs in the tech
+              industry.</p
+            >
+          </div>
+          <div class="col-lg-7">
+            <div class="owl-carousel testimonial-carousel">
+              <div class="bg-white p-5">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <p
+                  >I used RozGaar to prepare for my coding interview, and it
+                  was the best decision I ever made. The personalized learning
+                  path and mock interviews with real engineers helped me gain
+                  confidence and ace my interview. I landed my dream job at a
+                  top tech company, thanks to RozGaar!</p
+                >
+                <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                  <img
+                    class="img-fluid mr-4"
+                    src="img/testimonial-2.jpg"
+                    alt="" />
+                  <div>
+                    <h5>Himanshu</h5>
+                    <span>Dsa</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-5">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <p
+                  >RozGaar has everything you need to prepare for your coding
+                  interview in one place. The curated practice questions, video
+                  tutorials, and personalized feedback helped me identify my
+                  weaknesses and improve my skills. I highly recommend RozGaar
+                  to anyone looking to succeed in their coding interview.</p
+                >
+                <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                  <img
+                    class="img-fluid mr-4"
+                    src="img/testimonial-1.jpg"
+                    alt="" />
+                  <div>
+                    <h5>Soumya</h5>
+                    <span>JAVA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial Start -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div
+              class="bg-light d-flex flex-column justify-content-center px-5"
+              style="height: 450px">
+              <div class="d-flex align-items-center mb-5">
+                <div class="btn-icon bg-primary mr-4">
+                  <i class="fa fa-2x fa-map-marker-alt text-white"></i>
+                </div>
+                <div class="mt-n1">
+                  <h4>Location</h4>
+                  <p class="m-0">DJSCE, Mumbai</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-5">
+                <div class="btn-icon bg-secondary mr-4">
+                  <i class="fa fa-2x fa-phone-alt text-white"></i>
+                </div>
+                <div class="mt-n1">
+                  <h4>Call Us</h4>
+                  <p class="m-0">+91797729688</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="btn-icon bg-warning mr-4">
+                  <i class="fa fa-2x fa-envelope text-white"></i>
+                </div>
+                <div class="mt-n1">
+                  <h4>Email Us</h4>
+                  <p class="m-0">init0.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="section-title position-relative mb-4">
+              <h6
+                class="d-inline-block position-relative text-secondary text-uppercase pb-2"
+                >Need Help?</h6
+              >
+              <h1 class="display-4">Send Us A Message</h1>
+            </div>
+            <div class="contact-form">
+              <form>
+                <div class="row">
+                  <div class="col-6 form-group">
+                    <input
+                      type="text"
+                      class="form-control border-top-0 border-right-0 border-left-0 p-0"
+                      placeholder="Your Name"
+                      required="required" />
+                  </div>
+                  <div class="col-6 form-group">
+                    <input
+                      type="email"
+                      class="form-control border-top-0 border-right-0 border-left-0 p-0"
+                      placeholder="Your Email"
+                      required="required" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control border-top-0 border-right-0 border-left-0 p-0"
+                    placeholder="Subject"
+                    required="required" />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control border-top-0 border-right-0 border-left-0 p-0"
+                    rows="5"
+                    placeholder="Message"
+                    required="required"></textarea>
+                </div>
+                <div>
+                  <button class="btn btn-primary py-3 px-5" type="submit"
+                    >Send Message</button
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+
+
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+      function redirectToCourse() {
+          // Get the value entered by the user
+          var keyword = document.querySelector('.form-control').value;
+          
+          // Check if the keyword is not empty
+          if (keyword.trim() !== '') {
+              // Redirect the user to course.html with the keyword as a query parameter
+              window.location.href = 'course.html?keyword=' + encodeURIComponent(keyword);
+          }
+      }
+  </script>
+  
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

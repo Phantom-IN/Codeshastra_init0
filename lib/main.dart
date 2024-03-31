@@ -1,7 +1,9 @@
 import 'package:code/Home.dart';
+import 'package:code/Register.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Home1.dart';
 import 'RHome1.dart';
@@ -19,7 +21,7 @@ Future<void> main() async {
 }
 
 class Splash extends StatefulWidget {
-  const Splash({super.key});
+  const Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> createState() => _SplashState();
@@ -30,15 +32,26 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
+    _checkNameAndNavigate();
+  }
 
-    // Add a delay of 3 seconds before navigating to the home screen
-    Future.delayed(Duration(seconds: 4,milliseconds: 200), () {
+  Future<void> _checkNameAndNavigate() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? name = prefs.getString('name');
+
+    if (name != null && name.isNotEmpty) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => RHome1(),
+          builder: (context) => Home1(),
         ),
       );
-    });
+    } else {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => Register(),
+        ),
+      );
+    }
   }
 
   @override
@@ -54,5 +67,3 @@ class _SplashState extends State<Splash> {
     );
   }
 }
-
-

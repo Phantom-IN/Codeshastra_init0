@@ -16,6 +16,12 @@ class _MenuState extends State<Menu> {
 
   String? Name;
 
+  @override
+  void initState() {
+    super.initState();
+    _fetchUserData();
+  }
+
   Future<void> _fetchUserData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String name = prefs.getString('name') ?? '';
@@ -55,42 +61,6 @@ class _MenuState extends State<Menu> {
                   child: Text(
                     Name?.isNotEmpty == true ? Name! : 'Welcome User',
                     style: TextStyle(fontFamily: "crete", fontSize: 20, color: Colors.white),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 16.0,top: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                            SimpleIcons.github, color: SimpleIconColors.github,
-                          ),
-                      SizedBox(width: 10,),
-                      Text(
-                            "Github",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: "crete"
-                            ),
-                          ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 16.0,top: 10),
-                  child: Row(
-                    children: [
-                      Icon(
-                        SimpleIcons.linkedin, color: SimpleIconColors.linkedin,
-                      ),
-                      SizedBox(width: 10,),
-                      Text(
-                        "Linkedin",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: "crete"
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ],

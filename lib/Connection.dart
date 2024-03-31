@@ -22,7 +22,7 @@ class _ConnectionState extends State<Connection> {
                 color: Colors.white,
                 height: 100.0,
                 child: const Text(
-                  "Get coaching",
+                  "Let's Connect",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontFamily: 'Montserrat',
@@ -93,7 +93,7 @@ class _ConnectionState extends State<Connection> {
                         child: InkWell(
                           onTap: () {},
                           child: const Text(
-                            "Buy more",
+                            "Connections",
                             style: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.bold,
@@ -110,39 +110,6 @@ class _ConnectionState extends State<Connection> {
             ],
           ),
           const SizedBox(height: 40.0),
-          Container(
-            padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                InkWell(
-                  onTap: () {},
-                  child: const Text(
-                    "MY COACHES",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12.0,
-                      fontFamily: 'Quicksand',
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: const Text(
-                    "VIEW PAST SESSIONS",
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12.0,
-                      fontFamily: 'Quicksand',
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10.0),
           GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 2.0,
